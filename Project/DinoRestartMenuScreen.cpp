@@ -51,9 +51,9 @@ void Engine::DinoRestartMenuScreen::Init()
         ->SetColor(213, 168, 134);
 
     // Add input mappings
-    game->GetInputManager()->AddInputMapping("next", SDLK_RIGHT)
-        ->AddInputMapping("prev", SDLK_LEFT)
-        ->AddInputMapping("press", SDLK_SPACE);
+    game->GetInputManager()->AddInputMapping(SDLK_RIGHT,"next" )
+        ->AddInputMapping(SDLK_LEFT, "prev")
+        ->AddInputMapping(SDLK_RETURN,"press" );
 }
 
 void Engine::DinoRestartMenuScreen::Update()

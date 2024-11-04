@@ -48,13 +48,14 @@ void Engine::LessonAI01_SteeringBehaviors::CreatePlayerSprite()
 	
 
 
-	inputManager->AddInputMapping("walk-left", SDLK_LEFT)->AddInputMapping("walk-left", SDL_CONTROLLER_BUTTON_DPAD_LEFT)
-		->AddInputMapping("walk-left", SDL_CONTROLLER_AXIS_LEFTX)->AddInputMapping("walk-right", SDLK_RIGHT)
-		->AddInputMapping("walk-right", SDL_CONTROLLER_BUTTON_DPAD_RIGHT)->AddInputMapping("walk-right", SDL_CONTROLLER_AXIS_RIGHTX)
-		->AddInputMapping("walk-up", SDLK_UP)->AddInputMapping("walk-up", SDL_CONTROLLER_BUTTON_DPAD_UP)
-		->AddInputMapping("walk-up", SDL_CONTROLLER_AXIS_RIGHTY)->AddInputMapping("walk-down", SDLK_DOWN)
-		->AddInputMapping("walk-down", SDL_CONTROLLER_BUTTON_DPAD_DOWN)->AddInputMapping("walk-down", SDL_CONTROLLER_AXIS_LEFTY)\
-		->AddInputMapping("quit", SDLK_ESCAPE);
+	inputManager->AddInputMapping(SDLK_LEFT, "walk-left")->AddInputMapping(SDL_CONTROLLER_BUTTON_DPAD_LEFT, "walk-left")
+		->AddInputMapping(SDL_CONTROLLER_AXIS_LEFTX, "walk-left")->AddInputMapping(SDLK_RIGHT, "walk-right")
+		->AddInputMapping(SDL_CONTROLLER_BUTTON_DPAD_RIGHT, "walk-right")->AddInputMapping(SDL_CONTROLLER_AXIS_RIGHTX, "walk-right")
+		->AddInputMapping(SDLK_UP, "walk-up")->AddInputMapping(SDL_CONTROLLER_BUTTON_DPAD_UP, "walk-up")
+		->AddInputMapping(SDL_CONTROLLER_AXIS_RIGHTY, "walk-up")->AddInputMapping(SDLK_DOWN, "walk-down")
+		->AddInputMapping(SDL_CONTROLLER_BUTTON_DPAD_DOWN, "walk-down")->AddInputMapping(SDL_CONTROLLER_AXIS_LEFTY, "walk-down")
+		->AddInputMapping(SDLK_ESCAPE, "quit");
+
 
 }
 

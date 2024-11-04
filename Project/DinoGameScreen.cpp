@@ -68,7 +68,7 @@ void Engine::DinoGameScreen::Init()
 	dotSprite44 = new Sprite(dotTexture, game->GetDefaultSpriteShader(), game->GetDefaultQuad());
 
 	// Add input mapping 
-	game->GetInputManager()/*->AddInputMapping("restart", SDLK_r)*/->AddInputMapping("Jump", SDLK_UP)->AddInputMapping("Attack", SDLK_x)->AddInputMapping("Run Right", SDL_CONTROLLER_BUTTON_DPAD_RIGHT)->AddInputMapping("Run Left", SDL_CONTROLLER_BUTTON_DPAD_LEFT)->AddInputMapping("Jump", SDL_CONTROLLER_BUTTON_A)->AddInputMapping("Attack", SDL_CONTROLLER_BUTTON_X)->AddInputMapping("Quit", SDLK_ESCAPE)->AddInputMapping("Quit", SDL_CONTROLLER_BUTTON_Y);
+	game->GetInputManager()->AddInputMapping(SDLK_UP,"Jump")->AddInputMapping(SDLK_x,"Attack")->AddInputMapping(SDL_CONTROLLER_BUTTON_DPAD_RIGHT,"Run Right" )->AddInputMapping(SDL_CONTROLLER_BUTTON_DPAD_LEFT ,"Run Left" )->AddInputMapping(SDL_CONTROLLER_BUTTON_A, "Jump")->AddInputMapping(SDL_CONTROLLER_BUTTON_X,"Attack" )->AddInputMapping(SDLK_ESCAPE,"Quit" )->AddInputMapping(SDL_CONTROLLER_BUTTON_Y,"Quit" );
 
 	// Playing music
 	music = (new Music("2021-08-16_-_8_Bit_Adventure_-_www.FesliyanStudios.com.ogg"))->SetVolume(40)->Play(true);
@@ -91,7 +91,7 @@ void Engine::DinoGameScreen::Init()
 	// Inisialisasi obstacle spawn timer
 	obstacleSpawnTimer = 0;
 	// Add input mappings
-	game->GetInputManager()->AddInputMapping("mainmenu", SDLK_ESCAPE);
+	game->GetInputManager()->AddInputMapping(SDLK_ESCAPE,"mainmenu" );
 
 }
 

@@ -27,7 +27,7 @@ void Engine::Lesson06_ObjectPool::Init()
 	SetBackgroundColor(235, 229, 52);
 
 	// Add input
-	inputManager->AddInputMapping("quit", SDLK_ESCAPE);
+	inputManager->AddInputMapping(SDLK_ESCAPE,"quit" );
 }
 
 void Engine::Lesson06_ObjectPool::Update()

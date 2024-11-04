@@ -43,7 +43,7 @@ void Engine::GDGameScreen::Init()
 
 
 	// Add input mapping 
-	game->GetInputManager()->AddInputMapping("Up", SDLK_UP)->AddInputMapping("Down", SDLK_DOWN)->AddInputMapping("Attack", SDLK_x)->AddInputMapping("Right", SDLK_RIGHT)->AddInputMapping("Left", SDLK_LEFT);
+	game->GetInputManager()->AddInputMapping(SDLK_UP,"Up" )->AddInputMapping(SDLK_DOWN,"Down" )->AddInputMapping(SDLK_x, "Attack")->AddInputMapping(SDLK_RIGHT,"Right" )->AddInputMapping(SDLK_LEFT,"Left" );
 
 	// Playing music
 	music = (new Music("2021-08-16_-_8_Bit_Adventure_-_www.FesliyanStudios.com.ogg"))->SetVolume(40)->Play(true);
@@ -62,7 +62,7 @@ void Engine::GDGameScreen::Init()
 	debug = false;
 
 	// Add input mappings
-	game->GetInputManager()->AddInputMapping("mainmenu", SDLK_ESCAPE);
+	game->GetInputManager()->AddInputMapping(SDLK_ESCAPE,"mainmenu" );
 
 }
 

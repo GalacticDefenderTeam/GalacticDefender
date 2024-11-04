@@ -44,9 +44,9 @@ void Engine::DinoMainMenuScreen::Init()
 		->SetText("The Dino Game")->SetPosition(game->GetSettings()->screenWidth * 0.5f - 550, game->GetSettings()->screenHeight - 200.0f)->SetColor(255, 241, 193);
 
 	// Add input mappings
-	game->GetInputManager()->AddInputMapping("next", SDLK_RIGHT)
-		->AddInputMapping("prev", SDLK_LEFT)
-		->AddInputMapping("press", SDLK_SPACE);
+	game->GetInputManager()->AddInputMapping(SDLK_RIGHT,"next" )
+		->AddInputMapping(SDLK_LEFT,"prev" )
+		->AddInputMapping(SDLK_SPACE, "press");
 
 }
 

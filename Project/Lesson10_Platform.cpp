@@ -51,7 +51,7 @@ void Lesson10_Platform::Init()
 	dotSprite4 = new Sprite(dotTexture, defaultSpriteShader, defaultQuad);
 
 	// Add input mapping 
-	inputManager->AddInputMapping("Run Right", SDLK_RIGHT)->AddInputMapping("Run Left", SDLK_LEFT)->AddInputMapping("Jump", SDLK_UP)->AddInputMapping("Attack", SDLK_x)->AddInputMapping("Run Right", SDL_CONTROLLER_BUTTON_DPAD_RIGHT)->AddInputMapping("Run Left", SDL_CONTROLLER_BUTTON_DPAD_LEFT)->AddInputMapping("Jump", SDL_CONTROLLER_BUTTON_A)->AddInputMapping("Attack", SDL_CONTROLLER_BUTTON_X)->AddInputMapping("Quit", SDLK_ESCAPE)->AddInputMapping("Quit", SDL_CONTROLLER_BUTTON_Y);
+	inputManager->AddInputMapping(SDLK_RIGHT,"Run Right" )->AddInputMapping(SDLK_LEFT,"Run Left" )->AddInputMapping(SDLK_UP,"Jump" )->AddInputMapping(SDLK_x,"Attack" )->AddInputMapping(SDL_CONTROLLER_BUTTON_DPAD_RIGHT,"Run Right" )->AddInputMapping(SDL_CONTROLLER_BUTTON_DPAD_LEFT,"Run Left" )->AddInputMapping(SDL_CONTROLLER_BUTTON_A,"Jump" )->AddInputMapping(SDL_CONTROLLER_BUTTON_X, "Attack")->AddInputMapping(SDLK_ESCAPE,"Quit")->AddInputMapping(SDL_CONTROLLER_BUTTON_Y, "Quit");
 
 	// Playing music
 	music = (new Music("2021-08-16_-_8_Bit_Adventure_-_www.FesliyanStudios.com.ogg"))->SetVolume(40)->Play(true);

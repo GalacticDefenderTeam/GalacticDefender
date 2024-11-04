@@ -25,13 +25,14 @@ namespace Engine {
 		void SetMouseCoords(float x, float y);
 		void OpenGameController();
 		void CloseGameController();
-		Engine::Input* AddInputMapping(string mappingName, unsigned int keyId);
+		Engine::Input* AddInputMapping(unsigned int keyId , string mappingName);
 		void Reset();
 	
 	private:
 		vec2 mouseCoords;
 		SDL_GameController* controller;
-		unordered_map<unsigned int, string> keyCodeNameMap;
+		//unordered_map<unsigned int, string> keyCodeNameMap;
+		unordered_map<unsigned int, vector<string>> keyCodeNameMap;
 		unordered_map<string, bool> pressedKeyMap;
 		vector<string> releasedKeys;
 	};

@@ -18,7 +18,7 @@ void Engine::Lesson05_Input::Init()
 
 	SetBackgroundColor(65, 180, 242);
 
-	inputManager->AddInputMapping("walk-left", SDLK_LEFT)->AddInputMapping("walk-left", SDL_BUTTON_LEFT)->AddInputMapping("walk-left", SDL_CONTROLLER_BUTTON_DPAD_LEFT)->AddInputMapping("walk-left", SDL_CONTROLLER_AXIS_LEFTX)->AddInputMapping("walk-right", SDLK_RIGHT)->AddInputMapping("walk-right", SDL_BUTTON_RIGHT)->AddInputMapping("walk-right", SDL_CONTROLLER_BUTTON_DPAD_RIGHT)->AddInputMapping("walk-right", SDL_CONTROLLER_AXIS_RIGHTX);
+	inputManager->AddInputMapping(SDLK_LEFT,"walk-left" )->AddInputMapping(SDL_BUTTON_LEFT,"walk-left" )->AddInputMapping(SDL_CONTROLLER_BUTTON_DPAD_LEFT,"walk-left" )->AddInputMapping(SDL_CONTROLLER_AXIS_LEFTX, "walk-left")->AddInputMapping(SDLK_RIGHT,"walk-right" )->AddInputMapping(SDL_BUTTON_RIGHT,"walk-right" )->AddInputMapping(SDL_CONTROLLER_BUTTON_DPAD_RIGHT,"walk-right" )->AddInputMapping(SDL_CONTROLLER_AXIS_RIGHTX,"walk-right" );
 }
 
 void Engine::Lesson05_Input::Update()

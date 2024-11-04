@@ -73,19 +73,19 @@ void Engine::Hero::Init(Input* inputManager)
 {
 	this->inputManager = inputManager;
 
-	inputManager->AddInputMapping("walk-left", SDLK_LEFT);
-	inputManager->AddInputMapping("walk-left", SDL_CONTROLLER_BUTTON_DPAD_LEFT);
-	inputManager->AddInputMapping("walk-left", SDL_CONTROLLER_AXIS_LEFTX);
+	inputManager->AddInputMapping(SDLK_LEFT,"walk-left" );
+	inputManager->AddInputMapping(SDL_CONTROLLER_BUTTON_DPAD_LEFT,"walk-left" );
+	inputManager->AddInputMapping(SDL_CONTROLLER_AXIS_LEFTX,"walk-left");
 
-	inputManager->AddInputMapping("walk-right", SDLK_RIGHT);
-	inputManager->AddInputMapping("walk-right", SDL_CONTROLLER_BUTTON_DPAD_RIGHT);
-	inputManager->AddInputMapping("walk-right", SDL_CONTROLLER_AXIS_RIGHTX);
+	inputManager->AddInputMapping(SDLK_RIGHT, "walk-right");
+	inputManager->AddInputMapping(SDL_CONTROLLER_BUTTON_DPAD_RIGHT,"walk-right" );
+	inputManager->AddInputMapping(SDL_CONTROLLER_AXIS_RIGHTX,"walk-right" );
 
-	inputManager->AddInputMapping("walk-up", SDLK_UP);
-	inputManager->AddInputMapping("walk-up", SDL_CONTROLLER_BUTTON_DPAD_UP);
-	inputManager->AddInputMapping("walk-up", SDL_CONTROLLER_AXIS_RIGHTY);
+	inputManager->AddInputMapping(SDLK_UP,"walk-up" );
+	inputManager->AddInputMapping(SDL_CONTROLLER_BUTTON_DPAD_UP,"walk-up" );
+	inputManager->AddInputMapping(SDL_CONTROLLER_AXIS_RIGHTY,"walk-up" );
 
-	inputManager->AddInputMapping("walk-down", SDLK_DOWN);
-	inputManager->AddInputMapping("walk-down", SDL_CONTROLLER_BUTTON_DPAD_DOWN);
-	inputManager->AddInputMapping("walk-down", SDL_CONTROLLER_AXIS_LEFTY);
+	inputManager->AddInputMapping(SDLK_DOWN,"walk-down" );
+	inputManager->AddInputMapping(SDL_CONTROLLER_BUTTON_DPAD_DOWN,"walk-down" );
+	inputManager->AddInputMapping(SDL_CONTROLLER_AXIS_LEFTY,"walk-down" );
 }

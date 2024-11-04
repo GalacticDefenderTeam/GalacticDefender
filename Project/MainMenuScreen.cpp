@@ -39,9 +39,9 @@ void Engine::MainMenuScreen::Init()
 		->SetText("The Spawning Turtle")->SetPosition(game->GetSettings()->screenWidth * 0.5f - 500, game->GetSettings()->screenHeight - 100.0f)->SetColor(235, 229, 52);
 
 	// Add input mappings
-	game->GetInputManager()->AddInputMapping("next", SDLK_DOWN)
-		->AddInputMapping("prev", SDLK_UP)
-		->AddInputMapping("press", SDLK_RETURN);
+	game->GetInputManager()->AddInputMapping(SDLK_RIGHT,"next" )
+		->AddInputMapping(SDLK_LEFT,"prev" )
+		->AddInputMapping(SDLK_RETURN,"press" );
 
 }
 

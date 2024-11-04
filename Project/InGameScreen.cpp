@@ -19,7 +19,7 @@ void Engine::InGameScreen::Init()
 	}
 
 	// Add input mappings
-	game->GetInputManager()->AddInputMapping("mainmenu", SDLK_ESCAPE);
+	game->GetInputManager()->AddInputMapping(SDLK_ESCAPE,"mainmenu" );
 
 }
 

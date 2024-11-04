@@ -31,9 +31,11 @@ vec2 Input::GetMouseCoords()
 	return this->mouseCoords;
 }
 
-Engine::Input* Input::AddInputMapping(string mapName, unsigned int keyId)
+Engine::Input* Input::AddInputMapping(unsigned int keyId, string mapName)
 {
-	keyCodeNameMap.insert(pair<unsigned int, string>(keyId, mapName));
+	//keyCodeNameMap.insert(pair<unsigned int, string>(keyId, mapName));
+	keyCodeNameMap[keyId].push_back(mapName);
+
 	return this;
 }
 
@@ -48,9 +50,9 @@ void Input::PressKey(unsigned int keyID)
 	// if keyID doesn't already exist in _keyMap, it will get added
 	auto it = keyCodeNameMap.find(keyID);
 	if (it != keyCodeNameMap.end()) {
-		string mapName = it->second;
-		pressedKeyMap[mapName] = true;
-		return;
+		for (const string& mapName : it->second) {
+			pressedKeyMap[mapName] = true;
+		}
 	}
 }
 
@@ -58,9 +60,10 @@ void Input::ReleaseKey(unsigned int keyID)
 {
 	auto it = keyCodeNameMap.find(keyID);
 	if (it != keyCodeNameMap.end()) {
-		string mapName = it->second;
-		pressedKeyMap[mapName] = false;
-		releasedKeys.push_back(mapName);
+		for (const string& mapName : it->second) {
+			pressedKeyMap[mapName] = false;
+			releasedKeys.push_back(mapName);
+		}
 	}
 }
 
