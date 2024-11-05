@@ -5,7 +5,7 @@
 
 Engine::GD_Game::GD_Game(Setting* setting) :Engine::Game(setting)
 {
-	setting->windowTitle = "Dino Game";
+	setting->windowTitle = "Galactic Defender";
 }
 
 Engine::GD_Game::~GD_Game()

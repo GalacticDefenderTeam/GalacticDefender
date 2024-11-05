@@ -27,7 +27,7 @@ namespace Engine {
 		void ResetGameState();
 	private:
 		Texture* dotTexture = NULL;
-		Sprite* monsterSprite = NULL;
+		Sprite* shipSprite = NULL;
 		Sprite* backgroundSprite = NULL;
 		Sprite* dotSprite1 = NULL;
 		Sprite* dotSprite2 = NULL;
@@ -40,6 +40,10 @@ namespace Engine {
 		Text* textRestart = NULL;
 		bool debug = false;
 
+		vector<Sprite*> backgrounds, middlegrounds, foregrounds;
+		void MoveLayer(vector<Sprite*>& bg, float speed);
+		void DrawLayer(vector<Sprite*>& bg);
+		void AddToLayer(vector<Sprite*>& bg, const std::string& name);
 		int score = 0;              // Variabel skor
 		float scoreUpdateTime = 0;   // Waktu untuk menambah skor
 		float offset = 0;
